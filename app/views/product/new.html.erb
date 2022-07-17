@@ -1,0 +1,17 @@
+<h1>New Article</h1>
+<%=  render 'form' , product: @product %>
+
+  <% 
+=begin %> 
+
+      <div>
+    <%= form.label :Admin %><br>
+    <%= form.text_field :admin %>
+          <% @product.errors.full_messages_for(:Admin).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  
+<% 
+=end %>
